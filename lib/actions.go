@@ -106,7 +106,7 @@ func GetById(id int64) ([]byte, *leveldb.DB, error) {
 		log.Fatal(err)
 	}
 
-	return []byte(""), db, fmt.Errorf("No todo found for this id")
+	return []byte(""), db, fmt.Errorf("No todo found for this ID: %d", id)
 }
 
 func ListAction(c *cli.Context) {
